@@ -3,7 +3,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const API_URL =
-  "https://server-kpm622r6h-parmarpratham333-gmailcoms-projects.vercel.app";
+  // "https://server-kpm622r6h-parmarpratham333-gmailcoms-projects.vercel.app";
+  "https://serverloginregistration.onrender.com";
 
 export const Registration: React.FC = () => {
   const [name, setName] = useState<string>("");
