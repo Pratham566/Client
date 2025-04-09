@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "https://serverloginregistration.onrender.com";
+const API_URL = "https://server-2ic5.onrender.com";
 
 export const Registration: React.FC = () => {
   const [name, setName] = useState<string>("");
