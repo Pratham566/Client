@@ -2,9 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL =
-  // "https://server-kpm622r6h-parmarpratham333-gmailcoms-projects.vercel.app";
-  "https://serverloginregistration.onrender.com";
+const API_URL = "https://serverloginregistration.onrender.com";
 
 export const Registration: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -16,7 +14,7 @@ export const Registration: React.FC = () => {
     e.preventDefault();
     try {
       const result = await axios.post<{ message: string }>(
-        `${API_URL}/user/createuser`, // Updated URL
+        `${API_URL}/user/createuser`,
         { name, email, password }
       );
 

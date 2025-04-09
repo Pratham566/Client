@@ -4,6 +4,7 @@ import "./App.css";
 import { Home } from "./Component/Home";
 import { Login } from "./Component/Login";
 import { Registration } from "./Component/Registration";
+import HomePage from "./Component/HomePage";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/" element={<Home />} />
+            <Route path="/HomePage" element={<HomePage />} />
           </Routes>
         </div>
       </div>

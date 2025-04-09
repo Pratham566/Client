@@ -2,27 +2,26 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL =
-  "https://server-kpm622r6h-parmarpratham333-gmailcoms-projects.vercel.app";
+const API_URL = "https://serverloginregistration.onrender.com";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const navigate = useNavigate(); // To redirect after login
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await axios.post<{ message: string; token: string }>(
-        `${API_URL}/user/login`, // ✅ Updated API URL
+        `${API_URL}/user/login`,
         { email, password },
-        { withCredentials: true } // ✅ Include cookies if needed
+        { withCredentials: true }
       );
 
       alert(response.data.message);
       localStorage.setItem("token", response.data.token);
 
-      navigate("/HomePage"); // ✅ Redirect after login
+      navigate("/HomePage");
     } catch (error: any) {
       console.error("Error:", error.response?.data?.message || "Login failed");
       alert(error.response?.data?.message || "Login failed");
